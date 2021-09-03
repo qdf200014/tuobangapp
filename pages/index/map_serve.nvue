@@ -1,0 +1,120 @@
+<template>
+	<view>
+		<!-- <view :style="{ height: statusBarHeight, width: '750px', 'background-color': '#fff' }"></view> -->
+		<view class="page-section page-section-gap">
+			<map :style="{width: '750rpx',height: page_height +'px','border-radius': '26rpx'}" :latitude="latitude" 
+			:longitude="longitude" :markers="covers" @markertap="markertap" @callouttap="markertap">
+			</map>
+		</view>
+	</view>
+</template>
+
+<script>
+	import { ip,userId } from '../../api.js'; 
+	export default {
+		data(){
+			return{
+				statusBarHeight: uni.getSystemInfoSync().statusBarHeight + 'px', //导航栏
+				page_height:'',
+				 
+				title: 'map',
+				latitude: 0,
+				longitude: 0,
+				covers: [],
+				onload_data:''
+			}
+		},
+		onLoad(e) {
+			this.latitude = e.latitude
+			this.longitude = e.longitude
+			console.log(JSON.parse(e.data))
+			let list = []
+			list = JSON.parse(e.data)
+			let that = this
+			uni.getSystemInfo({
+			    success: function (res) {
+			        // console.log(res); 
+			        that.page_height = res.windowHeight
+					var jj = {
+						id : '123', 
+						latitude : that.latitude,
+						longitude : that.longitude, 
+						iconPath : "../../static/myAddress.png",
+						callout : {
+							content: '我的位置',
+							color:'#fff',
+							bgColor:'red',
+							display:'ALWAYS',
+							fontSize:'16',
+							textAlign:'right'
+						}
+					}
+					that.covers = that.createData(list)
+					that.covers.unshift(jj)
+					console.log(that.covers)
+			    }
+			});
+				
+		},
+		methods:{ 
+			createData(arr){
+				var k = 0 ;
+				return arr.map(item=>{
+					var jj = {}
+					var ss = {}
+					// var oo = {}
+					if (item.community == undefined) {
+						ss.content = item.serveTitle
+						jj.id = item.serveUuid
+						jj.latitude = item.latitude
+						jj.longitude = item.longitude
+						jj.iconPath = "../../static/location_daibang.png"
+					}
+					//  else {
+					// 	ss.content = item.jianjie + '栋' 
+					// 	jj.id = k
+					// 	jj.latitude = item.center.split(',')[1]
+					// 	jj.longitude = item.center.split(',')[0]
+						
+					// }
+				// 	ss.color = '#ffffff'
+				// 	ss.fontSize = 14
+				// 	ss.borderRadius = 50 
+				// 	ss.bgColor = '#F58353'
+				// 	ss.padding = 10
+				// 	ss.display = 'ALWAYS'
+				// 	ss.width = 100
+				// 	ss.height = 100
+				
+				// 	jj.width = 1
+				// 	jj.height = 1
+					// jj.iconPath = '../../static/timg.png'
+					// jj.callout = ss
+					jj.label = ss
+					k++
+					 
+					return jj
+				})
+				
+				
+			},
+			//点击
+			markertap(e){  
+				console.log(e.detail.markerId)
+				if(e.detail.markerId == '123'){
+					uni.navigateTo({
+						url:'../my/master_page?id='+uni.getStorageSync('userinfo_Data').id, 
+						animationType: 'slide-in-right' 
+					})
+				}else{
+					uni.navigateTo({
+						url:'../serve_detail/serve_detail?id='+e.detail.markerId,
+						animationType: 'slide-in-right' 
+					})
+				}
+			},
+		}
+	};
+</script>
+
+<style></style>

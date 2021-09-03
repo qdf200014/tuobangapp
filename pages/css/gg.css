@@ -1,0 +1,19 @@
+.redius26{
+	border-radius: 26rpx;
+}
+.marBut{
+	margin-bottom: 26rpx;
+}
+.marTop{
+	margin-top: 26rpx;
+}
+.norow{
+	overflow: hidden;white-space: nowrap;text-overflow: ellipsis;
+}
+.rowTwo{
+	overflow: hidden; //超出部分隐藏
+	-webkit-line-clamp: 2; //只显示两行
+	text-overflow: ellipsis; //超出部分显示省略号
+	display: -webkit-box; //将对象作为弹性伸缩盒子模型显示
+	-webkit-box-orient: vertical; //设置或检索伸缩盒对象的子元素的排列方式 纵向
+}

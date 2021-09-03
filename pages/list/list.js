@@ -1,0 +1,133 @@
+let data = [
+	{
+		img:'../../static/list/shangquan/sq1.png',
+		name:'医疗'
+	},
+	{
+		img:'../../static/list/shangquan/sq2.png',
+		name:'家政'
+	},
+	{
+		img:'../../static/list/shangquan/sq3.png',
+		name:'快递服务'
+	},
+	{
+		img:'../../static/list/shangquan/sq4.png',
+		name:'休闲娱乐'
+	},
+	{
+		img:'../../static/list/shangquan/sq5.png',
+		name:'物流运输'
+	},
+	{
+		img:'../../static/list/shangquan/sq6.png',
+		name:'宠物寄养'
+	},
+	{
+		img:'../../static/list/shangquan/sq7.png',
+		name:'律师服务'
+	},
+	{
+		img:'../../static/list/shangquan/sq8.png',
+		name:'婚礼策划'
+	},
+	{
+		img:'../../static/list/shangquan/sq9.png',
+		name:'SPA'
+	},
+	{
+		img:'../../static/list/shangquan/sq10.png',
+		name:'全部类型'
+	}
+]
+let shangp = [
+	
+	{
+		img:'../../static/list/shangquan/sq11.png',
+		dpname:'中州螺蛳粉',
+		intro:'要经营食品、餐饮、等主要经营食品、餐饮、等主要经营食品、餐饮要经营食品',
+		site:'西直门外金贸大厦715',
+		label:['面食']
+	},
+	{
+		img:'../../static/list/shangquan/sq12.png',
+		dpname:'天天好心情家政服务',
+		intro:'要经营食品、餐饮、等主要经营食品、餐饮、等主要经营食品、餐饮要经营食品',
+		site:'西直门外金贸大厦715',
+		label:['生活','服务','家政']
+	},
+	{
+		img:'../../static/list/shangquan/sq13.png',
+		dpname:'北京九稳律师事务所',
+		intro:'要经营食品、餐饮、等主要经营食品、餐饮、等主要经营食品、餐饮要经营食品',
+		site:'西直门外金贸大厦715',
+		label:['维权','咨询']
+	},
+	{
+		img:'../../static/list/shangquan/sq14.png',
+		dpname:'货拉拉搬家',
+		intro:'要经营食品、餐饮、等主要经营食品、餐饮、等主要经营食品、餐饮要经营食品',
+		site:'西直门外金贸大厦715',
+		label:['生活','服务']
+	},
+	{
+		img:'../../static/list/shangquan/sq15.png',
+		dpname:'唱吧KTV',
+		intro:'要经营食品、餐饮、等主要经营食品、餐饮、等主要经营食品、餐饮要经营食品',
+		site:'西直门外金贸大厦715',
+		label:['娱乐','轰趴']
+	},{
+		img:'../../static/list/shangquan/sq14.png',
+		dpname:'货拉拉搬家',
+		intro:'要经营食品、餐饮、等主要经营食品、餐饮、等主要经营食品、餐饮要经营食品',
+		site:'西直门外金贸大厦715',
+		label:['生活','服务']
+	},
+	{
+		img:'../../static/list/shangquan/sq15.png',
+		dpname:'唱吧KTV',
+		intro:'要经营食品、餐饮、等主要经营食品、餐饮、等主要经营食品、餐饮要经营食品',
+		site:'西直门外金贸大厦715',
+		label:['娱乐','轰趴']
+	},
+]
+let listb = [
+	{
+		img:'../../static/list/shequ/sq4.png',
+		name:'九成新鱼竿'
+	},
+	{
+		img:'../../static/list/shequ/sq5.png',
+		name:'婴儿车非常新，没怎么用过，有需要的联系我，可邮寄'
+	},
+	{
+		img:'../../static/list/shequ/sq6.png',
+		name:'高档汽车坐垫'
+	},
+	{
+		img:'../../static/list/shequ/sq7.png',
+		name:'行车记录仪'
+	}
+]
+let bangzhu = [
+	{
+		img:'../../static/list/shequ/sq1.png',
+		name:'狮子城海棠苑'
+	},
+	{
+		img:'../../static/list/shequ/sq2.png',
+		name:'金茂大厦'
+	},
+	{
+		img:'../../static/list/shequ/sq3.png',
+		name:'西直门凯德茂'
+	},
+	{
+		img:'../../static/list/shequ/sq4.png',
+		name:'南礼士路'
+	}
+]
+export default {
+	data,shangp,listb,bangzhu
+	
+}
